@@ -9,6 +9,7 @@ fn main() {
     .flag("-cudart=shared")
     .flag("-ccbin=g++-12")
     .file("kernels/add.cu")
+    .file("kernels/silu.cu")
     .compile("libkernels.a");
 
   println!("cargo:rustc-link-lib=cudart");
